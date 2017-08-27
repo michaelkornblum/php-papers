@@ -1,9 +1,8 @@
 <?php
   $title = "Variables and Data Types";
-  require 'header.php';
+  require 'partials/header.php';
 
   echo '<h1>Variables and Data Types</h1>';
-
   /* RULES FOR INSTANCIATING VARIABLES
    * -  variables must always start with a $
    * -  the second character in variable names must be an
@@ -22,6 +21,7 @@
    * - booleans
   */
 
+  echo '<h2>Instanciating variables</h2>';
   // instanciate variables
   $string = 'The meaning of life, the Universe and Everything is ...';
   $number = 42;
@@ -31,7 +31,7 @@
   $b = 6.25;
   $fName = "Michael";
 
-  echo '<h2>Instanciating variables</h2>';
+  echo "<pre>";
   // show value and datatype of variables
   var_dump($string);
   echo "\n";
@@ -41,11 +41,14 @@
   echo "\n";
   var_dump($boolean);
   echo "\n";
+  echo "</pre>";
 
   echo '<h2>Changing variable values</h2>';
-  // change variable value
+  echo '<pre>';
+  // show current variable value
   var_dump($a);
   echo "\n";
+  // change variable value
   $a = $a + 10; // returns 15
   var_dump($a);
   echo "\n";
@@ -56,6 +59,9 @@
   echo "\n";
   var_dump($fName);
   echo "\n";
+  echo "</pre>";
+
+
 
   /* TYPE JUGGLING
    * Type jugging is a feature in PHP that converts the
@@ -66,6 +72,7 @@
    */
 
    echo '<h2>Type Juggling</h2>';
+   echo '<pre>';
    // convert $a to float for this operation
    var_dump($a + $b);
    echo "\n";
@@ -74,6 +81,9 @@
    $user = "username: mkornblum, id:" . $a;
    var_dump($user);
    echo "\n";
+   echo "</pre>";
+
+
 
    /*
     * ISSET and UNSET
@@ -84,6 +94,7 @@
 
 
     echo "<h2>isset and unset</h2>";
+    echo '<pre>';
     // return true if variable is set, false if it's not
     var_dump(isset($fName));
     echo "\n";
@@ -91,7 +102,6 @@
     unset($fName);
     // this will return false
     var_dump(isset($fName));
-
-
-  require 'footer.html';
+    echo '</pre>';
+    require 'partials/footer.html';
 ?>

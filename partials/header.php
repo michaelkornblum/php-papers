@@ -7,9 +7,9 @@
   <title><?php echo $title; ?></title>
   <style>
     body {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
+      font-family: sans-serif;
     }
   </style>
 </head>
 <body>
-  <pre>

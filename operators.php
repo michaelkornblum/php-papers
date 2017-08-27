@@ -1,6 +1,6 @@
 <?php
   $title = "Operators";
-  require 'header.php';
+  require 'partials/header.php';
 
   echo '<h1>Operators</h1>';
   $a = 10;
@@ -21,23 +21,24 @@
    */
 
    echo '<h2>Mathmatical Operators</h2>';
+   echo '<pre>';
    // add $a and $b
-   var_dump($a + $b);
+   var_dump($a + $b); // returns 15
    echo "\n";
    // subtract $a from $b
-   var_dump($a - $b);
+   var_dump($a - $b); // returns 5
    echo "\n";
    // multiply $a by $b
-   var_dump($a * $b);
+   var_dump($a * $b); // returns 50
    echo "\n";
    // divide $a by $b
-   var_dump($a / 3);
+   var_dump($a / 3); // returns 3.33...
    echo "\n";
    // return remainder of $a / 3
-   var_dump($a % 3);
+   var_dump($a % 3); // returns 1
    echo "\n";
    // return $a to the third power
-   var_dump($a ** 3);
+   var_dump($a ** 3); // returns 1000
    echo "\n";
 
    /* COMBINING MATHMATICAL OPERATORS
@@ -67,7 +68,7 @@
   // return 75
   var_dump((10 + 5) * 5);
   echo "\n";
-
+  echo "</pre>";
 
 
   /* ASSIGNMENT OPERATORS
@@ -77,7 +78,7 @@
   */
 
   echo "<h2>Assignment Operators</h2>";
-
+  echo "<pre>";
   // add 5 to $a
   // long form: $a = $a + 5;
   $a += 5; // returns 15;
@@ -113,9 +114,10 @@
   $a %= 3;
   var_dump($a); // returns 1
   echo "\n";
+  echo "</pre>";
 
   echo '<h2>Comparison Operators</h2>';
-
+  echo '<pre>';
   /* COMPARISON OPERATORS
    * Comparison operators are to compare two values for
    * for specific properties. With the exception of tne
@@ -166,10 +168,11 @@
   // Is $a less than or greater than 5?
   var_dump($a <=> 5); // return -1;
   echo "\n";
-
+  echo "</pre>";
 
 
   echo "<h2>Logical Operators</h2>";
+  echo "<pre>";
   /* LOGICAL OPERATORS
    * Logical operators can be used to combine multiple operators
    * into one expression. They are:
@@ -184,8 +187,10 @@
    // Is $a greater then 5 AND does $b equal 5?
    var_dump($a > 5 && $b == 5); // returns false;
    echo "\n";
+   echo "</pre>";
 
    echo '<h2>Increment / Decrement Operators</h2>';
+   echo '<pre>';
    /* INCREMENT / DECREMENT OPERATORS
     * Increment / Decrement Operators are used to increase or
     * decrease a variables value by one. When placed to the left
@@ -206,7 +211,7 @@
 
     // subtract 1 and display $a
     echo "Before: " . --$a . ", After: " . $a . "\n";
-
+    echo "</pre>";
 
 
     /* EXPANDED ORDER OF OPERATIONS
@@ -224,6 +229,7 @@
 
 
      echo "<h2>Bringing It All Together</h2>";
+     echo "<pre>";
      /* BRINGING IT ALL TOGETHER
       * You can chain operators
     */
@@ -232,6 +238,6 @@
     echo "\n";
 
     var_dump(($a + $b) * 2 + 3 * 4); // returns 24
-
-  require 'footer.html';
+    echo "</pre>";
+  require 'partials/footer.html';
 ?>
